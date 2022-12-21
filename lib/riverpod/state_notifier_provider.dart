@@ -15,31 +15,31 @@ class ShoppingListNotifier extends StateNotifier<List<ShoppingItemModel>> {
           [
             ShoppingItemModel(
               name: '김치',
-              quantitiy: 3,
+              quantity: 3,
               hasBought: false,
               isSpicy: true,
             ),
             ShoppingItemModel(
               name: '라면',
-              quantitiy: 5,
+              quantity: 5,
               hasBought: false,
               isSpicy: true,
             ),
             ShoppingItemModel(
               name: '삼겹살',
-              quantitiy: 10,
+              quantity: 10,
               hasBought: false,
               isSpicy: false,
             ),
             ShoppingItemModel(
               name: '수박',
-              quantitiy: 2,
+              quantity: 2,
               hasBought: false,
               isSpicy: true,
             ),
             ShoppingItemModel(
               name: '카스테라',
-              quantitiy: 5,
+              quantity: 5,
               hasBought: false,
               isSpicy: false,
             ),
@@ -54,7 +54,7 @@ class ShoppingListNotifier extends StateNotifier<List<ShoppingItemModel>> {
           (e) => e.name == name
               ? ShoppingItemModel(
                   name: e.name,
-                  quantitiy: e.quantitiy,
+                  quantity: e.quantity,
                   hasBought: !e.hasBought,
                   isSpicy: e.isSpicy,
                 )

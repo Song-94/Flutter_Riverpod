@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_state_riverpod/layout/default_layout.dart';
-import 'package:flutter_state_riverpod/riverpod/state_provider.dart';
+import 'package:flutter_state_riverpod/riverpod/provider.dart';
 
-class StateProviderScreen extends ConsumerWidget {
-  const StateProviderScreen({Key? key}) : super(key: key);
+class ProviderScreen extends ConsumerWidget {
+  const ProviderScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(

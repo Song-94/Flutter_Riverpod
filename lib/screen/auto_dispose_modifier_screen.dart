@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_state_riverpod/layout/default_layout.dart';
-import 'package:flutter_state_riverpod/riverpod/state_auto_dispose_modifier_provider.dart';
+import 'package:flutter_state_riverpod/riverpod/auto_dispose_modifier_provider.dart';
 
-class StateAutoDisposeModifierScreen extends ConsumerWidget {
-  const StateAutoDisposeModifierScreen({Key? key}) : super(key: key);
+class AutoDisposeModifierScreen extends ConsumerWidget {
+  const AutoDisposeModifierScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(

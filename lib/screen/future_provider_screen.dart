@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_state_riverpod/layout/default_layout.dart';
-import 'package:flutter_state_riverpod/riverpod/state_future_provider.dart';
+import 'package:flutter_state_riverpod/riverpod/future_provider.dart';
 
-class StateFutureProviderScreen extends ConsumerWidget {
-  const StateFutureProviderScreen({
+class FutureProviderScreen extends ConsumerWidget {
+  const FutureProviderScreen({
     Key? key,
   }) : super(key: key);
 
