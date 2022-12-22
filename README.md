@@ -48,3 +48,32 @@
 - 인스턴스 ⊂ 클래스 ⊂ 객체
 - https://codybuilder.com/17
 
+# ref 를 사용해서 프로바이더와 상호작용하기
+## ref.watch 
+- 프로바이더의 값을 취득하고 변화를 구독합니다. 
+  값의 변경이 발생하면, 위젯(widget)을 다시 빌드하거나 값을 구독(subscribed)하고 있는 위치에 
+  상태 값을 전달 및 제공합니다.
+- 반응형으로 Provider 의 값이 변경되면 자체적으로 다시 build 된다.
+- 비동기적으로 호출하거나, onTab, initState 등의 생명주기에서는 사용을 하면 안된다.
+- 다른 Provider 와 결합할 때 아주 유용하게 쓰인다!
+
+## ref.listen
+- 프로바이더의 상태 값을 구독하거나 상태값이 변했을때 어떠한 행위를 취해야할 경우 사용합니다.
+- Provider 의 값이 변경되면 값을 읽는 것이 아니라 정의한 함수를 실행한다.
+- ref.watch 와 마찬가지로 build 안이나 Provider 안에서 사용되어야 한다.
+- SnackBar 나 Dialog 를 처리하는데 유용하다!
+## ref.read 
+- 프로바이더의 상태값을 취득합니다. 이벤트 콜백함수에 사용하기 유용한데 
+  예를들어 버튼의 onPressed 콜백 함수에서 프로바이더의 필요한 상태값을 얻기위해서 사용할 수 있습니다.
+- Provider 의 값을 읽어오기만 한다. 값이 변경되어도 별다른 동작을 하지 않는다.
+- 특별한 경우 (initState, onPressed 1회성 함수, etc..) 가 아니면 사용을 하지 않는 것 같다
+## 노트
+- 기능을 구현할때는 가급적 ref.read 또는 ref.listen 보다 ref.watch 사용을 권장합니다.
+- ref.watch 을 사용하게되면 reactive(리엑티브)와 declarative(선언형)에 가까워 지고 
+  애플리케이션을 더 유지보수 하기 편리하게 만들어 줍니다.
+- ref.watch 를 사용하는 것을 권장. 
+- ref.read 를 build 메소드 내에서 사용하지 말라고 권장. 
+- build 수 감소를 위해 ref.read 를 사용하는 경우, 
+  ref.watch 를 사용해도 똑같은 효과를 얻을 수 있다고 한다.
+## site
+- https://velog.io/@leeeeeoy/Flutter-Riverpod-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0-1
